@@ -15,9 +15,10 @@ function runApp() {
   //   }
 }
 
+let exdays = 30; // cookie expiration in days
+
 function login(user, password) {
   alert(user + password);
-  let exdays = 30;
   setCookie("user", user, exdays);
   setCookie("password", password, exdays);
 }
