@@ -1,7 +1,13 @@
 function runApp() {
-  const queryString = window.location.search;
-  const urlParams = new URLSearchParams(queryString);
-  const user = urlParams.get("user");
+  //   const queryString = window.location.search;
+  //   const urlParams = new URLSearchParams(queryString);
+  //   const user = urlParams.get("user");
+  const user = getCookie("user");
+  if (user != "") {
+    alert("Welcome " + user);
+    // document.getElementById("login").style.display = "block";
+    // document.getElementById("logout").style.display = "none";
+  }
 
   //   if (user == "marcel.veselka@tesena.com") {
   //     document.getElementById("login").style.display = "none";
