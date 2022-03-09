@@ -5,7 +5,7 @@
   ================================================== -->
     <meta charset="utf-8" />
     <title>
-      Sign In &#8212; dronjo | your one stop shop for the best drons
+      Sign In &#8212; dronjo | your one stop shop for the best drones
     </title>
 
     <!-- Mobile Specific Metas
@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="plugins/slick/slick-theme.css" />
     <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="plugins/aos/aos.css" />
+    <link rel="stylesheet" id="css" />
 
     <!-- CUSTOM CSS -->
     <link href="css/style.css" rel="stylesheet" />
@@ -56,16 +57,22 @@
 
                 <div class="logo">
                   <h1>dronjo</h1>
-                  your one stop shop for the best drons
+                  your one stop shop for the best drones
                 </div>
                 <div class="title-text">
-                  <h3>Sign in to To Your Account</h3>
+                  <h3>Sign in to Your Account</h3>
                 </div>
-                <form action="#">
+                <form
+                  action="#"
+                  name="sign_in"
+                  onsubmit="login(document.sign_in.user.value, document.sign_in.password.value);"
+                >
                   <!-- Username -->
                   <input
+                    name="user"
                     class="form-control main"
-                    type="text"
+                    type="email"
+                    pattern=".+@tesena.com"
                     placeholder="Username"
                     required
                   />
@@ -104,10 +111,12 @@
     <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
     <script src="plugins/syotimer/jquery.syotimer.min.js"></script>
     <script src="plugins/aos/aos.js"></script>
-    <!-- google map -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
-    <script src="plugins/google-map/gmap.js"></script>
 
     <script src="js/script.js"></script>
+    <script src="buggy.js"></script>
+    <script src="app.js"></script>
+    <script>
+      runApp();
+    </script>
   </body>
 </html>
