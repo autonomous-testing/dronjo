@@ -5,15 +5,10 @@ function runApp() {
   const user = getCookie("user");
   if (user != "") {
     alert("Welcome " + user);
-    // document.getElementById("login").style.display = "block";
-    // document.getElementById("logout").style.display = "none";
+    document.getElementById("sign_in").style.display = "none";
+    document.getElementById("sign_up").style.display = "none";
+    document.getElementById("logout").style.display = "block";
   }
-
-  //   if (user == "marcel.veselka@tesena.com") {
-  //     document.getElementById("login").style.display = "none";
-  //     document.getElementById("logedin").style.display = "inline";
-  //     document.getElementById("user").innerHTML = user;
-  //   }
 
   //   if (buggy === true) {
   //     document.getElementById("bgwidget").style.display = "inline";
