@@ -4,7 +4,6 @@ function runApp() {
   //   const user = urlParams.get("user");
   const user = getCookie("user");
   if (user != "") {
-    alert("Welcome " + user);
     document.getElementById("sign_in").style.display = "none";
     document.getElementById("sign_up").style.display = "none";
     document.getElementById("logout").style.display = "block";
@@ -19,7 +18,6 @@ function runApp() {
 let exdays = 30; // cookie expiration in days
 
 function login(user, password) {
-  alert(user + password);
   setCookie("user", user, exdays);
   setCookie("password", password, exdays);
 }
