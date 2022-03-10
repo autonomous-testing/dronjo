@@ -1,17 +1,8 @@
 function runApp() {
-  //   const queryString = window.location.search;
-  //   const urlParams = new URLSearchParams(queryString);
-  //   const user = urlParams.get("user");
-  const user = getCookie("user");
-  if (user != "") {
+  if (userIsLogedIn()) {
     document.getElementById("sign_in").style.display = "none";
     document.getElementById("logout").style.display = "block";
   }
-
-  //   if (buggy === true) {
-  //     document.getElementById("bgwidget").style.display = "inline";
-  //     document.getElementById("css").href = "buggy.css";
-  //   }
 }
 
 let exdays = 30; // cookie expiration in days
@@ -50,14 +41,18 @@ function getCookie(cname) {
   return "";
 }
 
-// function checkCookie() {
-//   let user = getCookie("username");
-//   if (user != "") {
-//     alert("Welcome again " + user);
-//   } else {
-//     user = prompt("Please enter your name:", "");
-//     if (user != "" && user != null) {
-//       setCookie("username", user, 30);
-//     }
-//   }
-// }
+function userIsLogedIn() {
+  const user = getCookie("user");
+
+  return user != "";
+
+  // if (user != "") {
+  //   return true;
+  // } else {
+  // user = prompt("Please enter your name:", "");
+  // if (user != "" && user != null) {
+  //   setCookie("username", user, 30);
+  // }
+  // }
+  // return false;
+}
