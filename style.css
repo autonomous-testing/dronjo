@@ -182,8 +182,8 @@ button {
 .card-details__security-code-input:focus,
 .card-details__security-code-input:active,
 .card-details__security-code-input--valid {
-  color: #d40b5e;
-  border-bottom: 2px solid #d40b5e;
+  color: #fff;
+  border-bottom: 2px solid #fff;
 }
 
 .card-details__holder {
@@ -222,8 +222,7 @@ button {
 .card-details__holder-input:focus,
 .card-details__holder-input:active,
 .card-details__holder-input--valid {
-  /* color: #00558b; */
-  color: #d40b5e;
+  color: #fff;
   border-bottom: 2px solid #00558b;
 }
 
@@ -252,7 +251,8 @@ button {
 .card-details__submit {
   display: block;
   width: 100%;
-  background: radial-gradient(ellipse at center, #f93090 0%, #f10052 100%);
+  /* background: radial-gradient(ellipse at center, #f93090 0%, #f10052 100%); */
+  background: #2e7eed;
   background-position: center;
   background-repeat: no-repeat;
   color: #fff;
@@ -377,7 +377,6 @@ button {
     top: 50%;
     left: 50%;
     width: 175%;
-    height: 175%;
     transform: rotate(-5deg) translate(-50%, -50%);
     transform-origin: 50%;
     z-index: 1;
