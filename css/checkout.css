@@ -251,7 +251,6 @@ button {
 .card-details__submit {
   display: block;
   width: 100%;
-  /* background: radial-gradient(ellipse at center, #f93090 0%, #f10052 100%); */
   background: #2e7eed;
   background-position: center;
   background-repeat: no-repeat;
