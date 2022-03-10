@@ -5,18 +5,6 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size: 16px;
-}
-
-body {
-  background: linear-gradient(to right, #f00f55 0%, #00558b 100%);
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
-  letter-spacing: 0.03em;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-}
-
 p,
 a {
   color: #fff;
@@ -38,19 +26,6 @@ button {
   letter-spacing: 0.03em;
 }
 
-.container {
-  position: relative;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
 .product {
   width: 100%;
   max-width: 750px;
@@ -59,7 +34,7 @@ button {
 
 .product__details {
   padding: 30px 25px;
-  background-color: #012f43;
+  background-color: #2e7eed;
   color: #fff;
 }
 
@@ -79,7 +54,7 @@ button {
 .card-details {
   position: relative;
   padding: 25px;
-  background: linear-gradient(to right, #013552 0%, #00324e 100%);
+  background: #02225b;
   color: #fff;
 }
 
@@ -264,13 +239,13 @@ button {
 
 .card-details__expiration-date {
   position: relative;
-  max-width: 66px;
+  max-width: 70px;
   margin-top: 15px;
 }
 
 .card-details__details__security-code {
   position: relative;
-  max-width: 29px;
+  max-width: 35px;
   margin-top: 15px;
 }
 
