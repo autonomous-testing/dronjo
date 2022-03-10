@@ -5,7 +5,6 @@ function runApp() {
   const user = getCookie("user");
   if (user != "") {
     document.getElementById("sign_in").style.display = "none";
-    document.getElementById("sign_up").style.display = "none";
     document.getElementById("logout").style.display = "block";
   }
 
