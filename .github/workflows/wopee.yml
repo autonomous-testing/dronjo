@@ -1,0 +1,32 @@
+name: Wopee Tests
+
+on:
+  workflow_run:
+    workflows: ["pages build and deployment"]
+    types:
+      - completed
+
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v3
+        with:
+          python-version: "3.x"
+          architecture: "x64"
+      - name: Get last package version
+        # TODO:
+        run: wget https://github.com/autonomous-testing/bot-mvp/releases/download/0.1.2/bot_mvp-0.1.2-py3-none-any.whl
+      - name: Install wopee bot
+        run: pip install bot_mvp-0.1.2-py3-none-any.whl
+        # run: pip install -r requirements.txt
+      - name: Run wopee tests
+        run: bot_mvp wopee/dronjo.cloud.yaml
+      - uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: logs
+          path: *.log
+          retention-days: 30

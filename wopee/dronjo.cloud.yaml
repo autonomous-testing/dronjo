@@ -1,0 +1,42 @@
+url: https://dronjo.wopee.io/
+
+#############################################################################################
+# Demo 2: Typical steps to set up your bot
+#############################################################################################
+
+# - Step 1: Learning
+vrt_ci_build_id: bot-learning
+
+# - Step 2: Dry run & tuning
+# vrt_ci_build_id: bot-dry-run
+# time_out: 5000
+# ignored_areas_by_locator: [
+#
+# Ignore the map on the Contact page
+# "xpath=//iframe[@id='map_canvas']",
+#
+# Ignore the YT player and the video on the Gallery page
+# ".gallery",
+# "#ytplayer",
+# ]
+
+# - Step 3: Final test suite setup
+# vrt_ci_build_id: bot-final
+
+#############################################################################################
+# Wopee brain setup
+#############################################################################################
+vrt_project_name: dronjo
+vrt_api_key: J2KQQ5J91BMXGKMNXSXDNJKA8C5B
+vrt_api_url: https://vrtapi.dev.wopee.io
+
+# number_of_actions: 20 # Max 100 (Node.js heap out of memory)
+
+neo4j_host_name: neo4j.dev.wopee.io
+neo4j_project_name: dronjo
+# neo4j_password: neopassword
+neo4j_password: dev.wopee.io
+#############################################################################################
+
+#
+tags: ["a", "button"]

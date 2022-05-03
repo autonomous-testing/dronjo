@@ -1,0 +1,32 @@
+url: https://dronjo.wopee.io/
+
+#############################################################################################
+# Demo 2: Typical steps to set up your bot
+#############################################################################################
+
+# - Step 1: Learning
+vrt_ci_build_id: bot-learning
+
+# - Step 2: Dry run & tuning
+# vrt_ci_build_id: bot-dry-run
+
+# Ignore the map on the Contact page, gallery & YT player
+# ignored_areas_by_locator: ["xpath=//iframe[@id='map_canvas']", ".gallery", "#ytplayer"]
+
+# - Step 3: Final test suite setup
+# vrt_ci_build_id: bot-final
+
+#############################################################################################
+# Wopee brain setup
+#############################################################################################
+vrt_project_name: dronjo
+vrt_api_key: YW2H52GD5N4ZWGKARP5KK687CD13
+
+# number_of_actions: 20
+
+neo4j_project_name: dronjo
+neo4j_password: neopassword
+#############################################################################################
+
+#
+tags: ["a", "button"]
