@@ -1,0 +1,17 @@
+{
+  "name": "tst",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.21.1",
+    "@visual-regression-tracker/agent-playwright": "^5.1.0",
+    "js-yaml": "^4.1.0"
+  }
+}

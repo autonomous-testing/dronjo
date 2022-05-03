@@ -1,0 +1,8 @@
+apiUrl: http://localhost:4200
+apiKey: YW2H52GD5N4ZWGKARP5KK687CD13
+
+project: dronjo
+ciBuildId: wopee.pw
+branchName: master
+enableSoftAssert: true
+diffTollerancePercent: 1
