@@ -19,7 +19,7 @@ jobs:
       - name: Get last package version
         # TODO:
         run: wget https://github.com/autonomous-testing/bot-mvp/releases/download/0.1.2/bot_mvp-0.1.2-py3-none-any.whl
-      - name: Install wopee bot
+      - name: Install wopee
         run: pip install bot_mvp-0.1.2-py3-none-any.whl
         # run: pip install -r requirements.txt
       - name: Run wopee tests
