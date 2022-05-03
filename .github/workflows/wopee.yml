@@ -23,10 +23,11 @@ jobs:
         run: pip install bot_mvp-0.1.2-py3-none-any.whl
         # run: pip install -r requirements.txt
       - name: Run wopee tests
-        run: bot_mvp wopee/dronjo.cloud.yaml
+        run: cd wopee
+        run: bot_mvp dronjo.cloud.yaml
       - uses: actions/upload-artifact@v2
         if: always()
         with:
           name: logs
-          path: *.log
+          path: wopee/
           retention-days: 30
