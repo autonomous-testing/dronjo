@@ -1,11 +1,10 @@
 name: Wopee Tests
 
-
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 # on:
 #   workflow_run:
@@ -36,9 +35,10 @@ jobs:
         run: bot_mvp dronjo.cloud.yaml
 
       - name: Collect logs
-        run: mkdir logs
-        run: mv bot.errors.log logs
-        run: mv bot.log logs
+        run: |
+          mkdir logs
+          mv bot.errors.log logs
+          mv bot.log logs
 
       - uses: actions/upload-artifact@v2
         if: always()
