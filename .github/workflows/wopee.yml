@@ -32,7 +32,7 @@ jobs:
         # run: pip install -r requirements.txt
 
       - name: Run wopee tests
-        run: bot_mvp dronjo.cloud.yaml
+        run: bot_mvp wopee/dronjo.cloud.yaml
 
       - name: Collect logs
         run: |
