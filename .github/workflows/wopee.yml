@@ -27,7 +27,9 @@ jobs:
       # TODO:
       # run: curl -fsSL https://github.com/autonomous-testing/bot-mvp/releases/download/0.1.2/bot_mvp-0.1.2-py3-none-any.whl -O
       - name: Install wopee
-        run: pip install bot_mvp-0.1.2-py3-none-any.whl
+        run: |
+          pip install bot_mvp-0.1.2-py3-none-any.whl
+          playwright install
         # run: pip install git+ssh://git@github.com:autonomous-testing/bot-mvp.git
         # run: pip install -r requirements.txt
 
