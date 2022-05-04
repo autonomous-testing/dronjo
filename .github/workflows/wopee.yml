@@ -1,10 +1,10 @@
 name: Wopee Tests
 
-on:
-  workflow_run:
-    workflows: ["pages build and deployment"]
-    types:
-      - completed
+# on:
+#   workflow_run:
+#     workflows: ["pages build and deployment"]
+#     types:
+#       - completed
 
 jobs:
   test:
@@ -16,15 +16,23 @@ jobs:
         with:
           python-version: "3.x"
           architecture: "x64"
+
       - name: Get last package version
         # TODO:
         run: wget https://github.com/autonomous-testing/bot-mvp/releases/download/0.1.2/bot_mvp-0.1.2-py3-none-any.whl
+
       - name: Install wopee
         run: pip install bot_mvp-0.1.2-py3-none-any.whl
         # run: pip install -r requirements.txt
+
       - name: Run wopee tests
-        run: cd wopee
         run: bot_mvp dronjo.cloud.yaml
+
+      - name: Collect logs
+        run: mkdir logs
+        run: mv bot.errors.log logs
+        run: mv bot.log logs
+
       - uses: actions/upload-artifact@v2
         if: always()
         with:
