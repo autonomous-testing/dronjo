@@ -30,6 +30,9 @@ jobs:
         run: |
           pip install bot_mvp-0.1.2-py3-none-any.whl
           playwright install
+          curl \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/OWNER/REPO/releases/latest
 
       - name: Run wopee tests
         run: bot_mvp wopee/dronjo.cloud.yaml
