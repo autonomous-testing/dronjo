@@ -30,8 +30,6 @@ jobs:
         run: |
           pip install bot_mvp-0.1.2-py3-none-any.whl
           playwright install
-        # run: pip install git+ssh://git@github.com:autonomous-testing/bot-mvp.git
-        # run: pip install -r requirements.txt
 
       - name: Run wopee tests
         run: bot_mvp wopee/dronjo.cloud.yaml
