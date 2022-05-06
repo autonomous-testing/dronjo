@@ -26,7 +26,7 @@ jobs:
       - name: Get last package version
         # https://github.com/autonomous-testing/bot-mvp/releases/latest
         # https://github.com/autonomous-testing/bot-mvp/releases/download/latest
-        run: curl -fsSL https://github.com/autonomous-testing/bot-mvp/releases/download/0.1.2/bot_mvp-0.1.2-py3-none-any.whl -O
+        run: curl -fsSL https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/autonomous-testing/bot-mvp/releases/download/0.1.2/bot_mvp-0.1.2-py3-none-any.whl -O
 
       - name: Install wopee
         run: |
