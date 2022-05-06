@@ -23,16 +23,15 @@ jobs:
           python-version: "3.x"
           architecture: "x64"
 
-      # - name: Get last package version
-      # TODO:
-      # run: curl -fsSL https://github.com/autonomous-testing/bot-mvp/releases/download/0.1.2/bot_mvp-0.1.2-py3-none-any.whl -O
+      - name: Get last package version
+      # https://github.com/autonomous-testing/bot-mvp/releases/latest
+      # https://github.com/autonomous-testing/bot-mvp/releases/download/latest
+      run: curl -fsSL https://github.com/autonomous-testing/bot-mvp/releases/download/0.1.2/bot_mvp-0.1.2-py3-none-any.whl -O
+
       - name: Install wopee
         run: |
           pip install bot_mvp-0.1.2-py3-none-any.whl
           playwright install
-          curl \
-            -H "Accept: application/vnd.github.v3+json" \
-            https://api.github.com/repos/OWNER/REPO/releases/latest
 
       - name: Run wopee tests
         run: bot_mvp wopee/dronjo.cloud.yaml
