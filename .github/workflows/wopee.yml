@@ -28,10 +28,10 @@ jobs:
         # https://github.com/autonomous-testing/bot-mvp/releases/download/latest
         # curl -fsSL https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/autonomous-testing/bot-mvp/releases/download/0.1.2/bot_mvp-0.1.2-py3-none-any.whl -O
         run: |
-        gh api \
-          -H "Accept: application/vnd.github.v3+json" \
-          /repos/github.com/autonomous-testing/releases/assets/0.1.2
-          
+          gh api \
+            -H "Accept: application/vnd.github.v3+json" \
+            /repos/github.com/autonomous-testing/releases/assets/0.1.2
+
       # sh install.sh ${{ secrets.GITHUB_TOKEN }} autonomous-testing/bot-mvp bot_mvp-0.1.2-py3-none-any.whl 0.1.2
       # cat bot_mvp-0.1.2-py3-none-any.whl
 
