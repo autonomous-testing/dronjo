@@ -17,7 +17,7 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: actions/setup-python@v3
         with:
           python-version: "3.x"
@@ -26,15 +26,16 @@ jobs:
       - uses: actions/checkout@v3
         with:
           repository: autonomous-testing/bot-mvp
-          token: ${{ secrets.GITHUB_TOKEN }} # `GH_PAT` is a secret that contains your PAT
+          token: ${{ secrets.GITHUB_TOKEN }}
           path: bot
           ref: main
 
       - name: Get last package version
         # https://github.com/autonomous-testing/bot-mvp/releases/latest
         # https://github.com/autonomous-testing/bot-mvp/releases/download/latest
-        run: curl -fsSL https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/autonomous-testing/bot-mvp/releases/download/0.1.2/bot_mvp-0.1.2-py3-none-any.whl -O
-
+        # curl -fsSL https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/autonomous-testing/bot-mvp/releases/download/0.1.2/bot_mvp-0.1.2-py3-none-any.whl -O
+        run: |
+          sh install.sh ${{ secrets.GITHUB_TOKEN }} autonomous-testing/bot-mvp bot_mvp-0.1.2-py3-none-any.whl 0.1.2asdf
       - name: Install wopee
         run: |
           pip install bot_mvp-0.1.2-py3-none-any.whl
