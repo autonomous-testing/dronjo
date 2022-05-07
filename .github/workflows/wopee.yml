@@ -23,7 +23,7 @@ jobs:
           python-version: "3.x"
           architecture: "x64"
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           repository: autonomous-testing/bot-mvp
           token: ${{ secrets.GITHUB_TOKEN }} # `GH_PAT` is a secret that contains your PAT
