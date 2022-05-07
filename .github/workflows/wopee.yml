@@ -31,7 +31,8 @@ jobs:
           gh api \
             -H "Accept: application/vnd.github.v3+json" \
             /repos/github.com/autonomous-testing/releases/assets/0.1.2
-
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # sh install.sh ${{ secrets.GITHUB_TOKEN }} autonomous-testing/bot-mvp bot_mvp-0.1.2-py3-none-any.whl 0.1.2
       # cat bot_mvp-0.1.2-py3-none-any.whl
 
