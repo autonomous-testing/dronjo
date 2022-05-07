@@ -28,7 +28,7 @@ jobs:
         # https://github.com/autonomous-testing/bot-mvp/releases/download/latest
         # curl -fsSL https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/autonomous-testing/bot-mvp/releases/download/0.1.2/bot_mvp-0.1.2-py3-none-any.whl -O
         run: |
-          sh install.sh ${{ secrets.GITHUB_TOKEN }} autonomous-testing/bot-mvp bot_mvp-0.1.2-py3-none-any.whl 0.1.2asdf
+          sh install.sh ${{ secrets.GITHUB_TOKEN }} autonomous-testing/bot-mvp bot_mvp-0.1.2-py3-none-any.whl 0.1.2
       - name: Install wopee
         run: |
           pip install bot_mvp-0.1.2-py3-none-any.whl
