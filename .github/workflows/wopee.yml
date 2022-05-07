@@ -23,6 +23,12 @@ jobs:
           python-version: "3.x"
           architecture: "x64"
 
+      - uses: actions/checkout@v2
+        with:
+          repository: "autonomous-testing/bot-mvp"
+          token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
+          path: bot
+
       - name: Get last package version
         # https://github.com/autonomous-testing/bot-mvp/releases/latest
         # https://github.com/autonomous-testing/bot-mvp/releases/download/latest
