@@ -12,5 +12,5 @@ VERSION=$4     # tag name or the word "latest"
 
 # https://github.com/autonomous-testing/bot-mvp/releases/download/0.1.2/bot_mvp-0.1.2-py3-none-any.whl
 curl -L -s -H "Authorization: token $TOKEN" -H 'Accept:application/octet-stream' \
-"https://api.github.com/repos/$REPO/releases/assets/latest" \
+"https://api.github.com/repos/$REPO/releases/assets/0.1.2" \
 -o $FILE
