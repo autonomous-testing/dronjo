@@ -2,7 +2,7 @@ import { expect } from "@playwright/test";
 
 import test from "../wopee/assist";
 
-import { cards } from "../data/cards";
+import { Cards } from "../data/cards";
 import { Login } from "../pages/dronjoLogin";
 import { Checkout } from "../pages/dronjoCheckout";
 
@@ -40,7 +40,7 @@ test("Gallery page", async ({ page }) => {
 test("Check out", async ({ page }) => {
   await page.locator(".btn-main-md >> text=Buy Now").click();
 
-  const validCard = cards.validCard;
+  const validCard = Cards.validCard;
 
   const login = new Checkout(page);
   await login.submitPaymentDetails(

@@ -1,5 +1,5 @@
 // Stripe testing cards: https://stripe.com/docs/testing
-export const cards = {
+export const Cards = {
   validCard: {
     first: "4000",
     second: "0566",
