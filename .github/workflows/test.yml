@@ -62,8 +62,8 @@ jobs:
       - uses: actions/upload-artifact@v2
         if: always()
         with:
-          name: logs
-          path: wopee/
+          name: wopee-logs
+          path: logs/
           retention-days: 30
 
   regression-w-assitant:
