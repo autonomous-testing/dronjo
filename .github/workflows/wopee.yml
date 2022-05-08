@@ -26,8 +26,7 @@ jobs:
       - name: Get last package version
         run: |
           gh auth status 
-          gh release download --repo autonomous-testing/bot-mvp
-          # gh release download 0.1.2 --repo autonomous-testing/bot-mvp
+          gh release download --repo autonomous-testing/bot-mvp --archive zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
