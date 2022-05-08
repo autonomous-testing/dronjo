@@ -12,8 +12,6 @@ type TestFixtures = {
   wopee: PlaywrightVisualRegressionTracker;
 };
 
-// Extend base test by providing "todoPage" and "settingsPage".
-// This new "test" can be used in multiple test files, and each of them will get the fixtures.
 export const test = base.extend<{}, TestFixtures>({
   wopee: [
     async ({ browserName }, use) => {

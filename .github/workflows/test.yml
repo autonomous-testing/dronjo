@@ -40,8 +40,7 @@ jobs:
           architecture: "x64"
 
       - name: Get last package version
-        run: |
-          gh release download --repo autonomous-testing/bot-mvp --archive zip --dir dist
+        run: gh release download --repo autonomous-testing/bot-mvp --archive zip --dir dist
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_30D_EXPIRATION }} # Set new PAT when expires https://github.com/settings/tokens
 
@@ -84,7 +83,7 @@ jobs:
 
       - name: Run Playwright tests
         run: npx playwright test
-        # TODO: run: npx playwright test --config=tests/wopee.config.js
+        # TODO: run: npx playwright test --config=tst/wopee.config.js
 
       - uses: actions/upload-artifact@v2
         if: always()

@@ -1,5 +1,5 @@
-apiUrl: http://localhost:4200
-apiKey: YW2H52GD5N4ZWGKARP5KK687CD13
+apiUrl: https://vrtapi.dev.wopee.io
+apiKey: J2KQQ5J91BMXGKMNXSXDNJKA8C5B
 
 project: dronjo
 ciBuildId: wopee.pw
