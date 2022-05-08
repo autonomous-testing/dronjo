@@ -26,11 +26,11 @@ jobs:
       - name: Get last package version
         run: |
           gh auth status
-          gh auth login
+          gh auth login --with-token < $GITHUB_TOKEN
           gh auth status
           gh release download --repo autonomous-testing/bot-mvp --archive zip
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT_30D_EXPIRATION }}
           # GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install wopee
