@@ -25,14 +25,15 @@ jobs:
 
       - name: Get last package version
         run: |
-          gh release download --repo autonomous-testing/bot-mvp --archive zip
-          ls -la
+          gh release download --repo autonomous-testing/bot-mvp --archive zip --dir dist
+          ls -la dist/
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_30D_EXPIRATION }}
 
       - name: Install wopee
         run: |
-          pip install bot_mvp-0.1.2-py3-none-any.whl
+          # pip install bot_mvp-0.1.2-py3-none-any.whl
+          pip install dist/*.zip
           playwright install
 
       - name: Run wopee tests
