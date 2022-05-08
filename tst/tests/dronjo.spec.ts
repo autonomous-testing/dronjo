@@ -1,6 +1,6 @@
 import { expect } from "@playwright/test";
 
-import { test } from "../wopee/assist";
+import test from "../wopee/assist";
 
 import { cards } from "../data/cards";
 import { Login } from "../pages/dronjoLogin";

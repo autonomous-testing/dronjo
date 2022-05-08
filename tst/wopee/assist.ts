@@ -12,26 +12,34 @@ type TestFixtures = {
   wopee: PlaywrightVisualRegressionTracker;
 };
 
-export const test = base.extend<{}, TestFixtures>({
-  wopee: [
-    async ({ browserName }, use) => {
-      await use(new PlaywrightVisualRegressionTracker(browserName, config));
-    },
-    { scope: "worker" },
-  ],
-});
+let test;
 
-test.beforeAll(async ({ wopee }) => {
-  await wopee.start();
-});
-
-test.afterEach(async ({ page, wopee }, testInfo) => {
-  await page.waitForTimeout(1000);
-  await wopee.trackPage(page, testInfo.title, {
-    diffTollerancePercent: config.diffTollerancePercent,
+if (process.env.WOPEE === "1") {
+  test = base.extend<{}, TestFixtures>({
+    wopee: [
+      async ({ browserName }, use) => {
+        await use(new PlaywrightVisualRegressionTracker(browserName, config));
+      },
+      { scope: "worker" },
+    ],
   });
-});
 
-test.afterAll(async ({ wopee }) => {
-  await wopee.stop();
-});
+  test.beforeAll(async ({ wopee }) => {
+    await wopee.start();
+  });
+
+  test.afterEach(async ({ page, wopee }, testInfo) => {
+    await page.waitForTimeout(1000);
+    await wopee.trackPage(page, testInfo.title, {
+      diffTollerancePercent: config.diffTollerancePercent,
+    });
+  });
+
+  test.afterAll(async ({ wopee }) => {
+    await wopee.stop();
+  });
+} else {
+  test = base;
+}
+
+export default test;

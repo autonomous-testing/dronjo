@@ -82,8 +82,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run Playwright tests
-        run: npx playwright test
-        # TODO: run: npx playwright test --config=tst/wopee.config.js
+        run: npm run assistant
 
       - uses: actions/upload-artifact@v2
         if: always()
