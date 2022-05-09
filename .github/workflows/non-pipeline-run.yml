@@ -12,7 +12,7 @@ on:
           - wopee
           - assistant
       botActions:
-        description: "Number of interations bot should do (if wopee):"
+        description: "Actions bot should do (if wopee):"
         required: false
         default: 5
 
