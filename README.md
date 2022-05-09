@@ -2,7 +2,7 @@
 
 Our demo app to test and demonstrate bots we are building. 
 
-You can find here very simple dron eCommerce application and 3 level of tests:
+You can find here very simple dron eCommerce application. To demonstrate our autonomous testing we implemented 3 level of tests:
 1. Standard automated functional regression testing in implemented in Playwright with TypeScript 
 2. Wopee assistant: Standard automated functional regression testing assisted by autonomous visual regression testing assistant.
 3. Wopee bot: Fully autonomous visual regrasion testing bot conducting smoke test with 10 interactions.
