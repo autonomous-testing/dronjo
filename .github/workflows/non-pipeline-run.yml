@@ -4,11 +4,11 @@ on:
   workflow_dispatch:
     inputs:
       autonomyLevel:
-        description: "Autonomy level (assistant/wopee): "
+        description: "Autonomy level (assistant/wopee):"
         required: true
         default: "wopee"
       botActions:
-        description: "Number of interations bot should do: "
+        description: "Number of interations bot should do (if wopee):"
         required: false
         default: 5
 
@@ -34,6 +34,12 @@ jobs:
         run: |
           pip install dist/*.zip
           playwright install
+
+      - name: Update config
+        run: |
+          echo "TODO: This will work only for config with specifit 10 action set. Improve the sed command to more general replacement"
+          sed -i 's/number_of_actions: 10/number_of_actions: ${{ github.event.inputs.botActions }}/g' wopee/dronjo.cloud.yaml
+          cat wopee/dronjo.cloud.yaml
 
       - name: Run wopee tests
         run: bot_mvp wopee/dronjo.cloud.yaml
