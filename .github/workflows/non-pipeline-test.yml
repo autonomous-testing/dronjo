@@ -1,4 +1,4 @@
-name: Non-pipeline testing
+name: 🕹 Non-pipeline testing
 
 on:
   workflow_dispatch:
