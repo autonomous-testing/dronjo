@@ -1,4 +1,4 @@
-name: Non-pipeline testing ${{ github.event.inputs.autonomyLevel }}
+name: Non-pipeline testing
 
 on:
   workflow_dispatch:
