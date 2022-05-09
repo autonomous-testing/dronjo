@@ -84,7 +84,8 @@ jobs:
           path: playwright-report/
           retention-days: 30
 
-  printInputs:
+  noJobToRun:
+    if: github.event.inputs.autonomyLevel != 'assistant' && github.event.inputs.autonomyLevel != 'wopee'
     runs-on: ubuntu-latest
     steps:
       - run: |
