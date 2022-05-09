@@ -14,7 +14,7 @@ on:
 
 jobs:
   wopee:
-    if: ${{ github.event.inputs.autonomyLevel }} == 'wopee'
+    if: github.event.inputs.autonomyLevel == 'wopee'
     name: Wopee bot testing 🐒
     timeout-minutes: 60
     runs-on: ubuntu-latest
@@ -58,7 +58,7 @@ jobs:
           retention-days: 30
 
   regression-w-assitant:
-    if: ${{ github.event.inputs.autonomyLevel }} == 'assistant'
+    if: github.event.inputs.autonomyLevel == 'assistant'
     name: Wopee assistant testing 🏋️
     timeout-minutes: 60
     runs-on: ubuntu-latest
