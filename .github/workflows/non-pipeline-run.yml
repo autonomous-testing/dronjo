@@ -7,6 +7,10 @@ on:
         description: "Autonomy level (assistant/wopee):"
         required: true
         default: "wopee"
+        type: choice
+        options:
+          - wopee
+          - assistant
       botActions:
         description: "Number of interations bot should do (if wopee):"
         required: false
