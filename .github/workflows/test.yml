@@ -4,7 +4,7 @@ on: page_build
 
 jobs:
   regression-test:
-    name: Standard regression testing 🤖
+    name: Regression testing 🤖
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
