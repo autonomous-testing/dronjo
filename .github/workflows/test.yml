@@ -4,6 +4,7 @@ on: page_build
 
 jobs:
   regression-test:
+    name: Standard regression testing 🤖
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
@@ -29,7 +30,7 @@ jobs:
           retention-days: 30
 
   wopee:
-    name: Testing with wopee 🐒
+    name: Testing with wopee bot 🐒
     needs: regression-test
     timeout-minutes: 60
     runs-on: ubuntu-latest
