@@ -80,9 +80,10 @@ jobs:
           path: playwright-report/
           retention-days: 30
 
-  # printInputs:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - run: |
-  #         echo "Log level: ${{ github.event.inputs.logLevel }}"
-  #         echo "Tags: ${{ github.event.inputs.tags }}"
+  printInputs:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "No job to run with parameters provided."
+          echo "Log level: ${{ github.event.inputs.logLevel }}"
+          echo "Tags: ${{ github.event.inputs.tags }}"
