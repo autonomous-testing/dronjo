@@ -16,7 +16,6 @@ jobs:
   wopee:
     if: ${{ github.event.inputs.autonomyLevel }} == 'wopee'
     name: Wopee bot testing 🐒
-    needs: regression-test
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
@@ -55,7 +54,6 @@ jobs:
   regression-w-assitant:
     if: ${{ github.event.inputs.autonomyLevel }} == 'assistant'
     name: Wopee assistant testing 🏋️
-    needs: regression-test
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
