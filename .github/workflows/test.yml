@@ -29,6 +29,7 @@ jobs:
           retention-days: 30
 
   wopee:
+    name: Testing with wopee 🐒
     needs: regression-test
     timeout-minutes: 60
     runs-on: ubuntu-latest
@@ -66,6 +67,7 @@ jobs:
           retention-days: 30
 
   regression-w-assitant:
+    name: Testing with wopee assistant 🏋️
     needs: regression-test
     timeout-minutes: 60
     runs-on: ubuntu-latest
