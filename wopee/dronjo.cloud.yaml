@@ -6,7 +6,7 @@ vrt_ci_build_id: pipeline-job-test
 # Wopee brain setup
 #############################################################################################
 vrt_project_name: dronjo
-vrt_api_key: J2KQQ5J91BMXGKMNXSXDNJKA8C5B
+# vrt_api_key: J2KQQ5J91BMXGKMNXSXDNJKA8C5B
 vrt_api_url: https://vrtapi.dev.wopee.io
 
 number_of_actions: 10
