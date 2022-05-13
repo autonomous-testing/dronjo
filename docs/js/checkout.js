@@ -61,7 +61,9 @@ function checkoutForm() {
     const value = parseInt(target.value, 10);
     const initialPrice = 386.78;
     const price = document.querySelector("[data-product-price]");
-    const newPrice = initialPrice * value;
+    let newPrice = initialPrice * value;
+
+    if (value === 4) newPrice = 0;
 
     price.textContent = `$${newPrice.toFixed(2)}`;
   }
