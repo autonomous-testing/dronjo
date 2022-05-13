@@ -14,6 +14,10 @@ type TestFixtures = {
 
 let test;
 
+if (process.env.VRT_API_KEY) {
+  config.apiKey = process.env.VRT_API_KEY;
+}
+
 if (process.env.WOPEE === "1") {
   test = base.extend<{}, TestFixtures>({
     wopee: [
