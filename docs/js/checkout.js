@@ -63,6 +63,7 @@ function checkoutForm() {
     const price = document.querySelector("[data-product-price]");
     let newPrice = initialPrice * value;
 
+    // This is by intention line to introduce bug to demo purposes
     if (value === 4) newPrice = 0;
 
     price.textContent = `$${newPrice.toFixed(2)}`;

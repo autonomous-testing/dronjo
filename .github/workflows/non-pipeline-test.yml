@@ -22,6 +22,8 @@ jobs:
     name: 🐒 Wopee bot testing
     timeout-minutes: 60
     runs-on: ubuntu-latest
+    env:
+      test_config: wopee/dronjo.cloud.yaml
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v3
@@ -42,12 +44,12 @@ jobs:
       - name: Update config
         run: |
           echo "TODO: This will work only for config with specifit 10 action set. Improve the sed command to more general replacement"
-          sed -i 's/number_of_actions: 10/number_of_actions: ${{ github.event.inputs.botActions }}/g' wopee/dronjo.cloud.yaml
+          sed -i 's/number_of_actions: 10/number_of_actions: ${{ github.event.inputs.botActions }}/g' $test_config
 
       - name: Run wopee tests
         run: |
-          sed -i 's/neo4j_password: get.from.sercets/neo4j_password: ${{ secrets.NEO4J_PSWD }}/g' wopee/dronjo.cloud.yaml
-          bot_mvp wopee/dronjo.cloud.yaml
+          sed -i 's/neo4j_password: get.from.sercets/neo4j_password: ${{ secrets.NEO4J_PSWD }}/g' $test_config
+          bot_mvp $test_config
         env:
           VRT_API_KEY: ${{ secrets.VRT_API_KEY }}
 
