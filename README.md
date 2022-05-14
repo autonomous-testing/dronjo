@@ -48,3 +48,5 @@ Apart from that there is non-pipple option to run ad-hoc testing:
 3. [Chekout page](https://dronjo.wopee.io/buy.html) do not contain fields to provide about customer for delivery
 4. [Chekout page](https://dronjo.wopee.io/buy.html) card details form does contain very weak validation
 5. [Chekout page](https://dronjo.wopee.io/buy.html) calculation for 4 items does not work - returns 0$
+
+You are welcome to contribute with more bugs to this list.
