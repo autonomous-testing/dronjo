@@ -41,3 +41,10 @@ Apart from that there is non-pipple option to run ad-hoc testing:
 ```
 
 5. Run bot: `bot_mvp wopee/dronjo.cloud.yaml`
+
+# Known bugs for demo purposes (intentionally left on page)
+1. Footer link for [Signup](https://dronjo.wopee.io/sign-up.html) brings you to 404
+2. Map on [Contact](https://dronjo.wopee.io/contact.html) page is generated randomly
+3. [Chekout page](https://dronjo.wopee.io/buy.html) do not contain fields to provide about customer for delivery
+4. [Chekout page](https://dronjo.wopee.io/buy.html) card details form does contain very weak validation
+5. [Chekout page](https://dronjo.wopee.io/buy.html) calculation for 4 items does not work - returns 0$
