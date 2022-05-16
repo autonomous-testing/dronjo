@@ -91,7 +91,7 @@ jobs:
       - name: Install Playwright
         run: npx playwright install --with-deps
 
-      - name: Run Playwright tests
+      - name: Run Wopee assistant tests
         run: |
           sed -i 's/ciBuildId: wopee.pw/ciBuildId: assist-${{ github.run_id }}/g' wopee.yaml
           npm run assistant
