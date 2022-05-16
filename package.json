@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "playwright test",
     "assistant": "WOPEE=1 playwright test"
   },
   "keywords": [],
