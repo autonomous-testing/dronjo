@@ -32,7 +32,7 @@ jobs:
           architecture: "x64"
 
       - name: Get last package version
-        run: gh release download --repo autonomous-testing/bot-mvp --archive zip --dir dist
+        run: gh release download --repo autonomous-testing/wopee --archive zip --dir dist
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_30D_EXPIRATION }} # Set new PAT when expires https://github.com/settings/tokens
 
@@ -46,7 +46,7 @@ jobs:
           echo "TODO: This will work only for config with specifit 10 action set. Improve the sed command to more general replacement"
           sed -i 's/number_of_actions: 10/number_of_actions: ${{ github.event.inputs.botActions }}/g' $test_config
 
-      - name: Run wopee tests
+      - name: Run Wopee tests
         run: |
           sed -i 's/neo4j_password: get.from.sercets/neo4j_password: ${{ secrets.NEO4J_PSWD }}/g' $test_config
           bot_mvp $test_config

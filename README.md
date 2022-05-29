@@ -32,7 +32,7 @@ Apart from that there is non-pipple option to run ad-hoc testing:
 
 1. Python need to be installed
 2. Create venv: `python -m venv venv` and activate it: `source venv/bin/activate`
-3. Get last version of bot: `gh release download --repo autonomous-testing/bot-mvp --archive zip --dir dist`
+3. Get last version of bot: `gh release download --repo autonomous-testing/wopee --archive zip --dir dist`
 4. Install wopee:
 
 ```shell
@@ -40,7 +40,7 @@ Apart from that there is non-pipple option to run ad-hoc testing:
     playwright install
 ```
 
-5. Run bot: `bot_mvp wopee/dronjo.cloud.yaml`
+5. Run bot: `wopee wopee/dronjo.cloud.yaml`
 
 # Known bugs for demo purposes (intentionally left on page)
 1. Footer link for [Signup](https://dronjo.wopee.io/sign-up.html) brings you to 404

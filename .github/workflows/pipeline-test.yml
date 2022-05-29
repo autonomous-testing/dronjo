@@ -44,7 +44,7 @@ jobs:
           architecture: "x64"
 
       - name: Get last package version
-        run: gh release download --repo autonomous-testing/bot-mvp --archive zip --dir dist
+        run: gh release download --repo autonomous-testing/wopee --archive zip --dir dist
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_30D_EXPIRATION }} # Set new PAT when expires https://github.com/settings/tokens
 
@@ -53,11 +53,11 @@ jobs:
           pip install dist/*.zip
           playwright install
 
-      - name: Run wopee tests
+      - name: Run Wopee tests
         run: |
           sed -i 's/neo4j_password: get.from.sercets/neo4j_password: ${{ secrets.NEO4J_PSWD }}/g' $test_config
           sed -i 's/vrt_ci_build_id: pipeline-job-test/vrt_ci_build_id: pipeline-${{ github.run_id }}/g' $test_config
-          bot_mvp $test_config
+          wopee $test_config
         env:
           VRT_API_KEY: ${{ secrets.VRT_API_KEY }}
 

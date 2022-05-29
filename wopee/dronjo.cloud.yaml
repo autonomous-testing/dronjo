@@ -14,6 +14,3 @@ neo4j_host_name: neo4j.dev.wopee.io
 neo4j_password: get.from.sercets
 neo4j_project_name: dronjo
 #############################################################################################
-
-#
-tags: ["a", "button"]
