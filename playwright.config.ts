@@ -12,6 +12,8 @@ import { devices } from "@playwright/test";
  */
 const config: PlaywrightTestConfig = {
   testDir: "./tst/tests",
+  // https://playwright.dev/docs/api/class-testconfig#test-config-report-slow-tests
+  reportSlowTests: null,
   /* Maximum time one test can run for. */
   timeout: 60 * 1000,
   expect: {
