@@ -1,6 +1,6 @@
 # Last status of our workflows / pipelines
 
-[![pages-build-deployment](https://github.com/autonomous-testing/dronjo/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/autonomous-testing/dronjo/actions/workflows/pages/pages-build-deployment)
+[![Pages build & deployment](https://github.com/autonomous-testing/dronjo/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/autonomous-testing/dronjo/actions/workflows/pages/pages-build-deployment)
 [![🚀 Pipeline testing](https://github.com/autonomous-testing/dronjo/actions/workflows/pipeline-test.yml/badge.svg)](https://github.com/autonomous-testing/dronjo/actions/workflows/pipeline-test.yml)
 
 [![🕹 Non-pipeline testing](https://github.com/autonomous-testing/dronjo/actions/workflows/non-pipeline-test.yml/badge.svg)](https://github.com/autonomous-testing/dronjo/actions/workflows/non-pipeline-test.yml)
