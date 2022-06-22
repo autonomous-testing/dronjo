@@ -8,7 +8,7 @@ vrt_ci_build_id: pipeline-job-test
 vrt_project_name: dronjo
 vrt_api_url: https://vrtapi.dev.wopee.io
 
-number_of_actions: 10
+number_of_scenarios: 10
 
 neo4j_host_name: neo4j.dev.wopee.io
 neo4j_password: get.from.sercets
