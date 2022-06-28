@@ -42,7 +42,8 @@ Apart from that there is non-pipple option to run ad-hoc testing:
 
 5. Run bot: `wopee wopee/dronjo.cloud.yaml`
 
-# Known bugs for demo purposes (intentionally left on page)
+# Demo and workshops
+## Known bugs for demo purposes (intentionally left on page)
 1. Footer link for [Signup](https://dronjo.wopee.io/sign-up.html) brings you to 404
 2. Map on [Contact](https://dronjo.wopee.io/contact.html) page is generated randomly
 3. [Chekout page](https://dronjo.wopee.io/buy.html) do not contain fields to provide about customer for delivery
@@ -50,3 +51,11 @@ Apart from that there is non-pipple option to run ad-hoc testing:
 5. [Chekout page](https://dronjo.wopee.io/buy.html) calculation for 4 items does not work - returns 0$
 
 You are welcome to contribute with more bugs to this list.
+
+## Versions for workshops
+There are 3 branches prepared for workshops:
+- `v1` - no login available, gallery with static pictures, map with address to tesena
+- `v2` - `v1` but login available
+- `v3` 
+  - `v2` + landing page button moved to green and aligned right, test alignement changed to justify
+  - gallery with dynamic pictures, map generated randomly, incorrect picture on checkout page
